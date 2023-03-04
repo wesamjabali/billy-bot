@@ -52,3 +52,8 @@ model Warning {
   userId    String
   user      User     @relation(fields: [userId], references: [id])
 }
+
+model Role {
+  id        String   @id @unique
+  roleName  String   @unique
+}
