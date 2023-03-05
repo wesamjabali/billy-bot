@@ -3,6 +3,8 @@ import { debate } from './debate';
 import { mute } from './mute';
 import { ping } from './ping';
 import { purge } from './purge';
+import { selfRoleCreate } from './self-role-create';
+import { selfRoleJoin } from './self-role-join';
 import { tag } from './tag';
 import { tagEdit } from './tag-edit';
 import { tagList } from './tag-list';
@@ -25,5 +27,7 @@ export const commands = [
     tag,
     tagList,
     unwarn,
-    debate
+    debate,
+    selfRoleCreate,
+    selfRoleJoin
 ] as const;
