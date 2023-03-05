@@ -28,6 +28,8 @@ export const selfRoleJoin: Command = {
         ).filter(async (role) =>  await prisma.role.findUnique({where :{ id : role.id }}))
         roles.forEach((role) => console.log(role.name))
         
+
+        //test
         // interaction.respond(response)
     }
 }
