@@ -8,13 +8,11 @@ export const selfRoleList: Command = {
         .setDescription('List all self roles')
         .toJSON(),
     async execute(interaction: ChatInputCommandInteraction) {
-        const roles = await prisma.role.findMany()
-        const reply = roles.map((role) => 
-            role.roleName.concat("\n")
-        ).join('')
-
-        console.log(reply)
-        interaction.reply(reply)
-        
+        const roleString = (await prisma.role.findMany())
+        .map((role) => 
+            role.roleName    
+        ).join(', ')
+        console.log(roleString)
+        interaction.reply(`\`\`\`${roleString}\`\`\``)w
     }
 }
