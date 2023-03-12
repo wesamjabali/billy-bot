@@ -13,6 +13,9 @@ import { unmute } from './unmute';
 import { unwarn } from './unwarn';
 import { warn } from './warn';
 import { warnList } from './warn-list';
+import { selfRoleDelete} from './self-role-delete'
+import { selfRoleLeave } from './self-role-leave';
+import { selfRoleList } from './self-role-list';
 
 export const commands = [
     ping,
@@ -29,5 +32,8 @@ export const commands = [
     unwarn,
     debate,
     selfRoleCreate,
-    selfRoleJoin
+    selfRoleJoin,
+    selfRoleDelete,
+    selfRoleLeave,
+    selfRoleList
 ] as const;

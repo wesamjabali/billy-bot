@@ -28,5 +28,4 @@ export const selfRoleCreate: Command = {
             interaction.reply(`${role.name} has just become self-assignable`)
         }
     }
-
 }
